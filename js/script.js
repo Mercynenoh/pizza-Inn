@@ -50,7 +50,17 @@ function ready() {
         }
         // buy button
         function buyButtonClicked() {
-            alert("Order placed").getElementsByClassName("cart-content")[0]
+            if(confirm("Do you want it delivered?")==true){
+            confirm("Delivery price is Ksh.100")  
+            prompt("Enter location") 
+            alert("Your order will be delivered to your location")
+            }else{
+                alert("Order placed")  
+            }
+
+           
+              
+            let cartContent= document.getElementsByClassName("cart-content")[0]
             while (cartContent.hasChildNodes()) {
                 cartContent.removeChild(cartContent.firstChild)
             }
