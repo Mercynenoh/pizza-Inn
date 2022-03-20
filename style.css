@@ -132,7 +132,10 @@ background: lime;
 }
 .social-icon{
     font-size: 50px;
+  
 }
 .social-icon:hover{
     color:white;
+    cursor: pointer;
+
 }
