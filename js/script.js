@@ -51,7 +51,7 @@ function ready() {
         // buy button
         function buyButtonClicked() {
             if(confirm("Do you want it delivered?")==true){
-            confirm("Delivery price is Ksh.100")  
+            confirm("Delivery price is Ksh.100")  g
             prompt("Enter location") 
             alert("Your order will be delivered to your location")
             }else{
