@@ -19,7 +19,6 @@ if (document.readyState == "loading"){
 }else{
     ready();
 };
-
 // making function
 function ready() {
     // remove items from cart
@@ -65,11 +64,38 @@ function addCartClicked(event) {
     let price =shopProducts.getElementsByClassName("price")[0].innerText;
     let productImg =shopProducts.getElementsByClassName("product-img")[0].src;
    console.log(title, price, productImg)
-    addProductToCart(title, price,)
+    addProductToCart(title, price,productImg)
     updatetotal();
 }
-//  update total
- function updatetotal(){
+function addProductToCart(title, price, productImg){
+    let cartShopBox = document.createElement("div");
+    cartShopBox.classList.add("cart-box");
+      let cartItems = document.getElementsByClassName("cart-content")[0];
+    let cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+    for ( let i=0; i>cartItemsNames.length; i++) {
+        alert('item has been added to cart');
+        return;
+        
+    }
+    let cartBoxContent =`
+      <img src="${productImg}" class="cart-img" id="img"></img>
+      <div class="detail-box">
+      <div class="cart-product-title">${title}</div>
+      <div class="cart-price">Ksh500</div>
+      <input type="number" value="1" class="cart-quantity">
+      </div>
+      <!-- remove cart -->
+      <i class='bx bx-trash cart-remove' ></i>`;
+
+      cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox); 
+    cartShopBox.getElementsByClassName("cart-remove") [0]
+    .addEventListener("click", removeCartItem);   
+    cartShopBox.getElementsByClassName('cart-quantity')[0]
+    .addEventListener("change", quantityChanged)
+}
+
+function updatetotal(){
     let cartContent = document.getElementsByClassName("cart-content")[0];
     let cartBoxes = cartContent.getElementsByClassName("cart-box");
     let total = 0;
@@ -83,3 +109,7 @@ function addCartClicked(event) {
         document.getElementsByClassName("total-price")[0].innerText = "Ksh" + total;
     }
 }
+
+
+//  update total
+ 

@@ -47,13 +47,14 @@ h1{
   padding-bottom: 10rem;
   
 }
-h3{
+h3, #a{
     font-size: 50px;
     font-weight: 600;
     text-align: center;
     color: rgb(9, 127, 223);
      
 }
+
 #menu{
     font-weight: 600;
     text-align: center;
@@ -71,15 +72,7 @@ h3{
     
    
 }
-/* .logo{
-    font-size: 1.1rem;
-    color: black;
-    font-weight: 400;
-} */
-/* #cart-icon{
-    font-size: 1.8rem;
-    cursor: pointer;
-} */
+
 .section-title{
     font-size: 1.5rem;
     font-weight: 600;
