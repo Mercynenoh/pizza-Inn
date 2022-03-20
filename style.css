@@ -71,15 +71,15 @@ h3{
     
    
 }
-.logo{
+/* .logo{
     font-size: 1.1rem;
     color: black;
     font-weight: 400;
-}
-#cart-icon{
+} */
+/* #cart-icon{
     font-size: 1.8rem;
     cursor: pointer;
-}
+} */
 .section-title{
     font-size: 1.5rem;
     font-weight: 600;
@@ -112,9 +112,24 @@ h3{
  }
  .add-cart{
      position: absolute;
-     bottom: 15px;
+     bottom: 0;
      right: 0;
-     cursor: pointer;   
+     cursor: pointer;  
+     padding: 10px; 
+     font-size: 2rem;
+ }
+ .add-cart:hover{
+     background:hsl(249, 32%, 17%);
  }
 
+
+ .cart-img{
+     width: 200px;
+     height: 200px;
+     object-fit: contain;
+     padding: 10px;
+ }
+ .btn-buy:hover{
+background: lime;
+ }
  
