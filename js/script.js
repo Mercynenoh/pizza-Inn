@@ -123,7 +123,7 @@ function ready() {
                 let cartBox = cartBoxes [i];
                 let priceElement = cartBox.getElementsByClassName("cart-price")[0];
                 let quantityElement= cartBox.getElementsByClassName("cart-quantity")[0];
-                // let price = parseFloat(priceElement.innerText.replace("Ksh", ""));
+                let price = parseFloat(priceElement.innerText.replace("Ksh", ""));
                 let quantity = quantityElement.value;
                 total =total + (price * quantity);
                 document.getElementsByClassName("total-price")[0].innerText = "Ksh" + total;
