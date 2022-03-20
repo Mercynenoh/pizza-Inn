@@ -35,7 +35,12 @@ function ready() {
                 let input = quantityInputs[i];
                 input.addEventListener("change", quantityChanged);
             }
-            
+             // add to cart
+             let addCart= document.getElementsByClassName("add-cart")
+             for ( let i=0; i< addCart.length; i++) {
+                let button = addCart[i];
+                button.addEventListener("click", addCartClicked);
+                }
         }
 
          // remove items from cart
@@ -53,7 +58,16 @@ function quantityChanged(event) {
     }
     updatetotal();
 }
-
+function addCartClicked(event) {
+    let button = event.target;
+    let shopProducts= button.parentElement;
+    let title =shopProducts.getElementsByClassName("product-title")[0].innerText;
+    let price =shopProducts.getElementsByClassName("price")[0].innerText;
+    let productImg =shopProducts.getElementsByClassName("product-img")[0].src;
+   console.log(title, price, productImg)
+    addProductToCart(title, price,)
+    updatetotal();
+}
 //  update total
  function updatetotal(){
     let cartContent = document.getElementsByClassName("cart-content")[0];
