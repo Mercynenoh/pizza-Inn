@@ -45,6 +45,16 @@ function ready() {
     let button = addCart[i];
     button.addEventListener("click", addCartClicked);
     }
+    document.getElementsByClassName("btn-buy")[0]
+    .addEventListener("click", buyButtonClicked);
+        }
+        // buy button
+        function buyButtonClicked() {
+            alert("Order placed").getElementsByClassName("cart-content")[0]
+            while (cartContent.hasChildNodes()) {
+                cartContent.removeChild(cartContent.firstChild)
+            }
+            updatetotal();
         }
         function removeCartItem(event){
             let buttonClicked = event.target
@@ -103,7 +113,7 @@ function ready() {
                 let cartBox = cartBoxes [i];
                 let priceElement = cartBox.getElementsByClassName("cart-price")[0];
                 let quantityElement= cartBox.getElementsByClassName("cart-quantity")[0];
-                let price = priceElement.innerText.replace("Ksh", "");
+                let price = parseFloat(priceElement.innerText.replace("Ksh", ""));
                 let quantity = quantityElement.value;
                 total =total + (price * quantity);
                 document.getElementsByClassName("total-price")[0].innerText = "Ksh" + total;
@@ -118,32 +128,3 @@ function ready() {
             
             
 
-//          // remove items from cart
-
-
- //  quantity changes
-// function quantityChanged(event) {
-//     let input = event.target;
-//     if (isNaN(input.value) || input.value <=0){
-//         input.value = 1;
-//     }
-//     updatetotal();
-// }
-
-
-//     }
-
-
-// let cartBoxContent =`
-//       <img src="${productImg}" class="cart-img" id="img"></img>
-//       <div class="detail-box">
-//       <div class="cart-product-title">${title}</div>
-//       <div class="cart-price">Ksh 500</div>
-//       <input type="number" value="1" class="cart-quantity">
-//       </div>
-//       <!-- remove cart -->
-//       <i class='bx bx-trash cart-remove' ></i>`;
-
-      
-// }
-//  
