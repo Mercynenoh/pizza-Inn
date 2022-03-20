@@ -28,10 +28,10 @@ z-index: 100;
  section{
      padding: 4rem 0 3rem;
  }
- /* body{
+ body{
      color: var(--text-color);
      background-color: pink;
- } */
+ }
 .nav{
     display: flex;
     align-items: centre;
