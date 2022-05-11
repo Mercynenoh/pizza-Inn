@@ -59,9 +59,9 @@ h3{
     color: orangered;
   
 }
-.crispy, .glutten, .stuffed, .top{
+/* .crispy, .glutten, .stuffed, .top{
     display: none;
-}
+} */
 .container{
     max-width: 1068px;
     margin: auto;
@@ -136,3 +136,6 @@ background: lime;
     cursor: pointer;
 
 }
+/* .back{
+    background-image: url(./img/menu\ 5.jpeg);
+} */

@@ -84,12 +84,12 @@ function ready() {
          let button = event.target;
          let shopProducts= button.parentElement;
          let title =shopProducts.getElementsByClassName("product-title")[0].innerText;
-         let price =shopProducts.getElementsByClassName("price")[0].innerText;
+         let price =shopProducts.getElementsByClassName("cart-price")[0].innerText;
          let productImg =shopProducts.getElementsByClassName("product-img")[0].src;
           console.log(title, price, productImg)
           addProductToCart(title, price,productImg)
           updatetotal();
-}
+        }
          function addProductToCart(title, price, productImg){
          let cartShopBox = document.createElement("div");
          cartShopBox.classList.add("cart-box");
@@ -104,7 +104,7 @@ function ready() {
         let cartBoxContent =`<img src="${productImg}" class="cart-img" id="img">
                              <div class="detail-box">
                              <div class="cart-product-title">${title}</div>
-                             <div class="cart-price">${price}</div>
+                             <div class="price">${price}</div>
                              <input type="number" value="1" class="cart-quantity">
                              </div>
                              <i class='bx bx-trash cart-remove' ></i>`
@@ -121,7 +121,7 @@ function ready() {
             let total = 0;
             for ( let i=0; i< cartBoxes.length; i++){
                 let cartBox = cartBoxes [i];
-                let priceElement = cartBox.getElementsByClassName("cart-price")[0];
+                let priceElement = cartBox.getElementsByClassName("price")[0];
                 let quantityElement= cartBox.getElementsByClassName("cart-quantity")[0];
                 let price = parseFloat(priceElement.innerText.replace("Ksh", ""));
                 let quantity = quantityElement.value;
